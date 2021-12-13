@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+  <template id="notes_block">
+    <div t-foreach="notes" t-as="note" t-field="note.content"/>
+  </template>
+
+</odoo>

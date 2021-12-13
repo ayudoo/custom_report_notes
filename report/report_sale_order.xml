@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+    <xpath expr="//t[@t-set='address']/*[1]" position="before">
+      <t t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="doc.get_custom_report_notes('address', 'before')"/>
+      </t>
+    </xpath>
+    <xpath expr="//t[@t-set='address']" position="inside">
+      <t t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="doc.get_custom_report_notes('address', 'after')"/>
+      </t>
+    </xpath>
+    <xpath expr="//div[hasclass('page')]/h2" position="before">
+      <t t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'before')"/>
+      </t>
+    </xpath>
+    <xpath expr="//div[hasclass('page')]/h2" position="after">
+      <t t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'after')"/>
+      </t>
+    </xpath>
+    <xpath expr="//table" position="before">
+      <t t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="doc.get_custom_report_notes('table', 'before')"/>
+      </t>
+    </xpath>
+    <xpath expr="//table/following::div[hasclass('clearfix')]" position="after">
+      <t t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="doc.get_custom_report_notes('table', 'after')"/>
+      </t>
+    </xpath>
+    <xpath expr="//div[@name='signature']" position="before">
+      <t t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="doc.get_custom_report_notes('signature_comment', 'before')"/>
+      </t>
+    </xpath>
+    <xpath expr="//div[@name='signature']" position="after">
+      <t t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="doc.get_custom_report_notes('signature_comment', 'after')"/>
+      </t>
+    </xpath>
+    <xpath expr="//t[@t-call='web.external_layout']" position="inside">
+      <t t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="doc.get_custom_report_notes('bottom', None)"/>
+      </t>
+    </xpath>
+  </template>
+</odoo>

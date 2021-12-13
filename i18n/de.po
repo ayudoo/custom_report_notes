@@ -1,0 +1,190 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_report_notes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-13 22:30+0000\n"
+"PO-Revision-Date: 2021-12-13 22:30+0000\n"
+"Last-Translator: <mj@ayudoo.bg>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__active
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: custom_report_notes
+#: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_note__field__address
+msgid "Address"
+msgstr "Adresse"
+
+#. module: custom_report_notes
+#: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_note__position__after
+msgid "After"
+msgstr "Nach"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__applicable_to_deliveries
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.view_custom_report_notes_search
+msgid "Applicable To Deliveries"
+msgstr "Anwendbar für Lieferungen"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__applicable_to_invoices
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.view_custom_report_notes_search
+msgid "Applicable To Invoices"
+msgstr "Anwendbar für Rechnungen"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__applicable_to_sale_orders
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.view_custom_report_notes_search
+msgid "Applicable To Sales Orders"
+msgstr "Anwendbar für Aufträge"
+
+#. module: custom_report_notes
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.view_custom_report_note_form
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.view_custom_report_notes_search
+msgid "Archived"
+msgstr "Archiviert"
+
+#. module: custom_report_notes
+#: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_note__position__before
+msgid "Before"
+msgstr "Vor"
+
+#. module: custom_report_notes
+#: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_note__field__bottom
+msgid "Bottom"
+msgstr "Unteres Ende"
+
+#. module: custom_report_notes
+#: model:ir.model,name:custom_report_notes.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfiguration "
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__content
+msgid "Content"
+msgstr "Inhalt"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: custom_report_notes
+#: model:ir.model,name:custom_report_notes.model_custom_report_notes_note
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.view_custom_report_note_form
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.view_custom_report_note_tree
+msgid "Custom Report Note"
+msgstr "Angepasste Berichtnotiz"
+
+#. module: custom_report_notes
+#: model:ir.actions.act_window,name:custom_report_notes.action_custom_report_note
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.res_config_settings_view_form
+msgid "Custom Report Notes"
+msgstr "Angepasste Berichtnotizen"
+
+#. module: custom_report_notes
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.view_custom_report_notes_search
+msgid "Custom Report Notes Search"
+msgstr "Berichtnotizen-Suche"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_account_move__display_name
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__display_name
+#: model:ir.model.fields,field_description:custom_report_notes.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:custom_report_notes.field_sale_order__display_name
+#: model:ir.model.fields,field_description:custom_report_notes.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__field
+msgid "Field"
+msgstr "Feld"
+
+#. module: custom_report_notes
+#: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_note__field__heading
+msgid "Heading"
+msgstr "Überschrift"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_account_move__id
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__id
+#: model:ir.model.fields,field_description:custom_report_notes.field_res_config_settings__id
+#: model:ir.model.fields,field_description:custom_report_notes.field_sale_order__id
+#: model:ir.model.fields,field_description:custom_report_notes.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: custom_report_notes
+#: model:ir.model,name:custom_report_notes.model_account_move
+msgid "Journal Entry"
+msgstr "Buchungseintrag"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_account_move____last_update
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note____last_update
+#: model:ir.model.fields,field_description:custom_report_notes.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:custom_report_notes.field_sale_order____last_update
+#: model:ir.model.fields,field_description:custom_report_notes.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt bearbeitet am"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisier am"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__name
+msgid "Name"
+msgstr ""
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__position
+msgid "Position"
+msgstr ""
+
+#. module: custom_report_notes
+#: model:ir.model,name:custom_report_notes.model_sale_order
+msgid "Sales Order"
+msgstr "Verkaufsauftrag"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__sequence
+msgid "Sequence"
+msgstr "Sequenz"
+
+#. module: custom_report_notes
+#: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_note__field__signature_comment
+msgid "Signature/Comment"
+msgstr "Signatur/Kommentar"
+
+#. module: custom_report_notes
+#: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_note__field__table
+msgid "Table"
+msgstr "Tabelle"
+
+#. module: custom_report_notes
+#: model:ir.model,name:custom_report_notes.model_stock_picking
+msgid "Transfer"
+msgstr "Lieferung vornehmen"
