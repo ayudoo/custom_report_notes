@@ -58,7 +58,7 @@ class CustomReportNote(models.Model):
         positions = list(
             dict(self._fields["position"]._description_selection(self.env)).values()
         )
-        fields_dict = dict(self._fields["field"].selection)
+        fields_dict = dict(self._fields["field"]._description_selection(self.env))
         combinations = []
 
         for key, field in fields_dict.items():
