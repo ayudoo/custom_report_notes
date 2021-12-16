@@ -43,13 +43,31 @@ class CustomReportNote(models.Model):
         "Applicable To Sales Orders",
         default=True,
     )
-    applicable_to_deliveries = fields.Boolean(
+    sale_order_state_ids = fields.Many2many(
+        string="Sales Order States",
+        comodel_name="custom_report_notes.report_state",
+        relation="custom_report_notes_note_sale_order_state_rel",
+        domain=[('res_model', '=', 'sale.order')],
+    )
+    applicable_to_stock_pickings = fields.Boolean(
         "Applicable To Deliveries",
         default=True,
     )
-    applicable_to_invoices = fields.Boolean(
+    stock_picking_state_ids = fields.Many2many(
+        string="Delivery States",
+        comodel_name="custom_report_notes.report_state",
+        relation="custom_report_notes_note_stock_picking_state_rel",
+        domain=[('res_model', '=', 'stock.picking')],
+    )
+    applicable_to_account_moves = fields.Boolean(
         "Applicable To Invoices",
         default=True,
+    )
+    account_move_state_ids = fields.Many2many(
+        string="Invoice States",
+        comodel_name="custom_report_notes.report_state",
+        relation="custom_report_notes_note_account_move_state_rel",
+        domain=[('res_model', '=', 'account.move')],
     )
 
     content = fields.Html("Content", translate=True, required=True)

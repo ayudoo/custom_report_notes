@@ -33,9 +33,9 @@ Usage
 In ``General Settings`` -> ``Document Layout`` open `Custom Report Notes`. Note, that
 you need permissions of group `System` to be able to create new notes.
 
-You can choose the type of report and where exactly to insert the note by selecting one
-of the fields ``Address``, ``Heading``, ``Table``, ``Signature/Comment`` and ``Bottom``,
-as well as whether to place it ``before`` or ``after``.
+You can choose the type of report, its state, and where exactly to insert the note by
+selecting one of the fields ``Address``, ``Heading``, ``Table``, ``Signature/Comment``
+and ``Bottom``, as well as whether to place it ``before`` or ``after``.
 
 They provide the full power of the Odoo wysiwyg editor, use it with caution.
 
@@ -43,7 +43,7 @@ They provide the full power of the Odoo wysiwyg editor, use it with caution.
 Limitations
 ^^^^^^^^^^^
 
-* links don't open a new page on printed PDFs
+* links don't open a new page when printed on paper
 
 
 Bug Tracker

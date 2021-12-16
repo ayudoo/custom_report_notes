@@ -24,6 +24,7 @@
         "report/report_deliveryslip.xml",
         "report/report_invoice.xml",
         "report/report_sale_order.xml",
+        "data/report_state_data.xml",
     ],
     "license": "LGPL-3",
     "application": True,

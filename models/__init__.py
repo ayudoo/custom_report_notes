@@ -5,5 +5,6 @@ from . import (
     note,
     res_config_settings,
     sale_order,
+    report_state,
     stock_picking,
 )

@@ -13,8 +13,16 @@ class StockPicking(models.Model):
     def _custom_report_notes_domain(self, field, position):
         domain = [
             ("field", "=", field),
-            ("applicable_to_deliveries", "=", True),
+            ("applicable_to_stock_pickings", "=", True),
+            ("|"),
+            ("stock_picking_state_ids", "=", False),
+            ("stock_picking_state_ids.id", "=", self._custom_report_notes_state()),
         ]
         if field != "bottom":
             domain.append(("position", "=", position))
         return domain
+
+    def _custom_report_notes_state(self):
+        return self.env.ref("custom_report_notes.stock_picking_state_{}".format(
+            self.state
+        )).id

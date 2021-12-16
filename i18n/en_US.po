@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_report_notes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-16 14:20+0000\n"
+"PO-Revision-Date: 2021-12-16 14:20+0000\n"
+"Last-Translator: <mj@ayudoo.bg>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_assigned
+msgid "assigned"
+msgstr "Ready"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.account_move_state_cancel
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_cancel
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_cancel
+msgid "cancel"
+msgstr "Cancelled"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_confirmed
+msgid "confirmed"
+msgstr "Waiting"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_done
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_done
+msgid "done"
+msgstr "Locked"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.account_move_state_draft
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_draft
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_draft
+msgid "draft"
+msgstr "Draft"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.account_move_state_posted
+msgid "posted"
+msgstr "Posted"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_sale
+msgid "sale"
+msgstr "Sales Order"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_sent
+msgid "sent"
+msgstr "Quotation Sent"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_waiting
+msgid "waiting"
+msgstr "Waiting Another Operation"

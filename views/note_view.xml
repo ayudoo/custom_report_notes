@@ -14,12 +14,12 @@
             domain="[('applicable_to_sale_orders','=',True)]"/>
           <filter
             string="Applicable To Deliveries"
-            name="applicable_to_deliveries"
-            domain="[('applicable_to_deliveries','=',True)]"/>
+            name="applicable_to_stock_pickings"
+            domain="[('applicable_to_stock_pickings','=',True)]"/>
           <filter
             string="Applicable To Invoices"
-            name="applicable_to_invoices"
-            domain="[('applicable_to_invoices','=',True)]"/>
+            name="applicable_to_account_moves"
+            domain="[('applicable_to_account_moves','=',True)]"/>
           <separator/>
           <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
         </search>
@@ -47,8 +47,23 @@
               </group>
               <group>
                 <field name="applicable_to_sale_orders"/>
-                <field name="applicable_to_deliveries"/>
-                <field name="applicable_to_invoices"/>
+                <field
+                  name="sale_order_state_ids"
+                  string="States"
+                  widget="many2many_tags"
+                  attrs="{'invisible': [('applicable_to_sale_orders', '=', False)]}"/>
+                <field name="applicable_to_stock_pickings"/>
+                <field
+                  name="stock_picking_state_ids"
+                  string="States"
+                  widget="many2many_tags"
+                  attrs="{'invisible': [('applicable_to_stock_pickings', '=', False)]}"/>
+                <field name="applicable_to_account_moves"/>
+                <field
+                  name="account_move_state_ids"
+                  string="States"
+                  widget="many2many_tags"
+                  attrs="{'invisible': [('applicable_to_account_moves', '=', False)]}"/>
               </group>
             </group>
             <group>
@@ -70,8 +85,8 @@
           <field name="field"/>
           <field name="position"/>
           <field name="applicable_to_sale_orders" widget="boolean_toggle"/>
-          <field name="applicable_to_deliveries" widget="boolean_toggle"/>
-          <field name="applicable_to_invoices" widget="boolean_toggle"/>
+          <field name="applicable_to_stock_pickings" widget="boolean_toggle"/>
+          <field name="applicable_to_account_moves" widget="boolean_toggle"/>
         </tree>
       </field>
     </record>
