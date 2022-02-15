@@ -194,8 +194,8 @@ msgstr "Berichtsstatus"
 
 #. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_report_state__res_model
-msgid "Res Model"
-msgstr ""
+msgid "Report Type"
+msgstr "Berichtsart"
 
 #. module: custom_report_notes
 #: model:ir.model,name:custom_report_notes.model_sale_order
