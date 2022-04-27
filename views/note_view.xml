@@ -83,7 +83,7 @@
           <field name="sequence" widget="handle"/>
           <field name="name"/>
           <field name="field"/>
-          <field name="position"/>
+          <field name="position" attrs="{'invisible': [('field', '=', 'bottom')]}"/>
           <field name="applicable_to_sale_orders" widget="boolean_toggle"/>
           <field name="applicable_to_stock_pickings" widget="boolean_toggle"/>
           <field name="applicable_to_account_moves" widget="boolean_toggle"/>
