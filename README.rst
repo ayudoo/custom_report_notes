@@ -5,6 +5,8 @@ Custom Report Notes
    :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
    :alt: License: LGPL-3
 
+**This is the Odoo 16 branch**
+
 **This module is in beta state. Feel free to provide feedback.**
 
 Add reusable notes to you sales orders, delivery slips and invoices.

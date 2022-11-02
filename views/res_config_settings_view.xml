@@ -7,7 +7,7 @@
     <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
     <field name="arch" type="xml">
       <xpath
-        expr="//div[@id='document_layout_setting']//div[hasclass('content-group')]"
+        expr="//div[@id='company_details_settings']//div[hasclass('o_setting_right_pane')]//div[hasclass('content-group')]"
         position="inside">
         <button
           name="%(custom_report_notes.action_custom_report_note)d"
