@@ -44,6 +44,7 @@
                 <field name="name"/>
                 <field name="field"/>
                 <field name="position" attrs="{'invisible': [('field', '=', 'bottom')]}"/>
+                <field name="page_break"/>
               </group>
               <group>
                 <field name="applicable_to_sale_orders"/>

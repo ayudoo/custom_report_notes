@@ -72,7 +72,7 @@ msgstr "Unteres Ende"
 #. module: custom_report_notes
 #: model:ir.model,name:custom_report_notes.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfiguration "
+msgstr "Konfiguration"
 
 #. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__content
@@ -152,7 +152,7 @@ msgstr "Rechnungsstatus"
 #. module: custom_report_notes
 #: model:ir.model,name:custom_report_notes.model_account_move
 msgid "Journal Entry"
-msgstr "Buchungseintrag"
+msgstr "Buchungssatz"
 
 #. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_account_move____last_update
@@ -162,7 +162,7 @@ msgstr "Buchungseintrag"
 #: model:ir.model.fields,field_description:custom_report_notes.field_sale_order____last_update
 #: model:ir.model.fields,field_description:custom_report_notes.field_stock_picking____last_update
 msgid "Last Modified on"
-msgstr "Zuletzt bearbeitet am"
+msgstr "Zuletzt geändert am"
 
 #. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__write_uid
@@ -181,6 +181,11 @@ msgstr "Zuletzt aktualisier am"
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_report_state__name
 msgid "Name"
 msgstr ""
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__page_break
+msgid "Page Break"
+msgstr "Seitenumbruch"
 
 #. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__position

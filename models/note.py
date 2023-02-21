@@ -39,6 +39,8 @@ class CustomReportNote(models.Model):
         required=True,
     )
 
+    page_break = fields.Boolean("Page Break", default=False)
+
     applicable_to_sale_orders = fields.Boolean(
         "Applicable To Sales Orders",
         default=True,
