@@ -2,7 +2,11 @@
 <odoo>
 
   <template id="notes_block">
-    <div t-foreach="notes" t-as="note" t-field="note.content"/>
+    <div
+      t-att-style="note.page_break and 'page-break-before:always;' or ''"
+      t-foreach="notes"
+      t-as="note"
+      t-field="note.content"/>
   </template>
 
 </odoo>
