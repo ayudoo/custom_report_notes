@@ -53,18 +53,45 @@
                   string="States"
                   widget="many2many_tags"
                   attrs="{'invisible': [('applicable_to_sale_orders', '=', False)]}"/>
+                <field
+                  name="sale_order_domain"
+                  string="Filter"
+                  widget="domain"
+                  attrs="{'invisible': [('applicable_to_sale_orders', '=', False)]}"
+                  context="{
+                    'preview_custom_report_note_sale_order_state_ids': sale_order_state_ids,
+                  }"
+                  options="{'model': 'sale.order'}"/>
                 <field name="applicable_to_stock_pickings"/>
                 <field
                   name="stock_picking_state_ids"
                   string="States"
                   widget="many2many_tags"
                   attrs="{'invisible': [('applicable_to_stock_pickings', '=', False)]}"/>
+                <field
+                  name="stock_picking_domain"
+                  string="Filter"
+                  widget="domain"
+                  attrs="{'invisible': [('applicable_to_stock_pickings', '=', False)]}"
+                  context="{
+                    'preview_custom_report_note_stock_picking_state_ids': stock_picking_state_ids,
+                  }"
+                  options="{'model': 'stock.picking'}"/>
                 <field name="applicable_to_account_moves"/>
                 <field
                   name="account_move_state_ids"
                   string="States"
                   widget="many2many_tags"
                   attrs="{'invisible': [('applicable_to_account_moves', '=', False)]}"/>
+                <field
+                  name="account_move_domain"
+                  string="Filter"
+                  widget="domain"
+                  attrs="{'invisible': [('applicable_to_account_moves', '=', False)]}"
+                  context="{
+                    'preview_custom_report_note_account_move_state_ids': account_move_state_ids,
+                  }"
+                  options="{'model': 'account.move'}"/>
               </group>
             </group>
             <group>

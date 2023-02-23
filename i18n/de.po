@@ -21,6 +21,11 @@ msgid "Account Move"
 msgstr "Buchung"
 
 #. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__account_move_domain
+msgid "Account Move Domain"
+msgstr "Buchungssatz-Domain"
+
+#. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__active
 msgid "Active"
 msgstr "Aktiv"
@@ -130,6 +135,11 @@ msgid "Field"
 msgstr "Feld"
 
 #. module: custom_report_notes
+#: model_terms:ir.ui.view,arch_db:custom_report_notes.view_custom_report_note_form
+msgid "Filter"
+msgstr ""
+
+#. module: custom_report_notes
 #: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_note__field__heading
 msgid "Heading"
 msgstr "Überschrift"
@@ -209,6 +219,11 @@ msgid "Sales Order"
 msgstr "Verkaufsauftrag"
 
 #. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__sale_order_domain
+msgid "Sales Order Domain"
+msgstr "Auftrags-Domain"
+
+#. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__sale_order_state_ids
 msgid "Sales Order States"
 msgstr "Auftragsstatus"
@@ -233,6 +248,11 @@ msgstr "Status"
 #: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_report_state__res_model__stock_picking
 msgid "Stock Picking"
 msgstr "Lagerpackauftrag"
+
+#. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__stock_picking_domain
+msgid "Stock Picking Domain"
+msgstr "Lieferschein-Domain"
 
 #. module: custom_report_notes
 #: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_note__field__table
