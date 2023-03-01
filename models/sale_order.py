@@ -47,7 +47,7 @@ class SaleOrder(models.Model):
         )).id
 
     @api.model
-    def search_count(self, args):
+    def search_count(self, args, **kwargs):
         relation_tuples = self.env.context.get(
             "preview_custom_report_note_sale_order_state_ids"
         )
@@ -60,4 +60,4 @@ class SaleOrder(models.Model):
                 args = args + self.env[
                     "custom_report_notes.note"
                 ]._get_base_sale_order_domain(state_ids)
-        return super().search_count(args)
+        return super().search_count(args, **kwargs)
