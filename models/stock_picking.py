@@ -15,12 +15,15 @@ class StockPicking(models.Model):
 
         for note in all_notes:
 
-            if not note.stock_picking_domain:
+            if not note.stock_picking_domain or note.stock_picking_domain == "[]":
+                matching_notes |= note
                 continue
 
             domain = note._parse_stock_picking_domain()
 
             if not domain:
+                # if there is an error during domain parsing, we do not want to add
+                # this note.
                 continue
 
             domain.append(("id", "=", self.id))
