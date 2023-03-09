@@ -14,7 +14,8 @@ class AccountMove(models.Model):
 
         for note in all_notes:
 
-            if not note.account_move_domain:
+            if not note.account_move_domain or note.account_move_domain == "[]":
+                matching_notes |= note
                 continue
 
             domain = note._parse_account_move_domain()

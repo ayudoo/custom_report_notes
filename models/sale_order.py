@@ -14,7 +14,8 @@ class SaleOrder(models.Model):
 
         for note in all_notes:
 
-            if not note.sale_order_domain:
+            if not note.sale_order_domain or note.sale_order_domain == "[]":
+                matching_notes |= note
                 continue
 
             domain = note._parse_sale_order_domain()
