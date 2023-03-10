@@ -64,7 +64,7 @@ class CustomReportNote(models.Model):
     @api.model
     def _get_base_sale_order_domain(self, state_ids):
         states = self.env["custom_report_notes.report_state"].browse(state_ids)
-        domain = [("state", "in", states.with_context(lang=False).mapped('name'))]
+        domain = [("state", "in", states.mapped('key'))]
         return domain
 
     def _get_default_sale_order_domain(self):
@@ -111,7 +111,7 @@ class CustomReportNote(models.Model):
     @api.model
     def _get_base_stock_picking_domain(self, state_ids):
         states = self.env["custom_report_notes.report_state"].browse(state_ids)
-        domain = [("state", "in", states.with_context(lang=False).mapped('name'))]
+        domain = [("state", "in", states.mapped('key'))]
         return domain
 
     def _get_default_stock_picking_domain(self):
@@ -159,7 +159,7 @@ class CustomReportNote(models.Model):
     @api.model
     def _get_base_account_move_domain(self, state_ids):
         states = self.env["custom_report_notes.report_state"].browse(state_ids)
-        domain = [("state", "in", states.with_context(lang=False).mapped('name'))]
+        domain = [("state", "in", states.mapped('key'))]
         return domain
 
     def _get_default_account_move_domain(self):

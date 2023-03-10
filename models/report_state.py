@@ -12,8 +12,14 @@ class ReportState(models.Model):
     name = fields.Char(
         string="Name",
         required=True,
-        index=True,
         translate=True,
+    )
+
+    key = fields.Char(
+        string="Key",
+        required=True,
+        index=True,
+        translate=False,
     )
 
     res_model = fields.Selection(
