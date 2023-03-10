@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-13 22:30+0000\n"
-"PO-Revision-Date: 2021-12-13 22:30+0000\n"
+"POT-Creation-Date: 2023-03-10 10:49+0000\n"
+"PO-Revision-Date: 2023-03-10 10:49+0000\n"
 "Last-Translator: <mj@ayudoo.bg>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -75,6 +75,13 @@ msgid "Bottom"
 msgstr "Unteres Ende"
 
 #. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.account_move_state_cancel
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_cancel
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_cancel
+msgid "Cancelled"
+msgstr "Abgebrochen"
+
+#. module: custom_report_notes
 #: model:ir.model,name:custom_report_notes.model_res_config_settings
 msgid "Config Settings"
 msgstr "Konfiguration"
@@ -130,6 +137,13 @@ msgid "Display Name"
 msgstr "Anzeigename"
 
 #. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.account_move_state_draft
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_draft
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_draft
+msgid "Draft"
+msgstr "Entwurf"
+
+#. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__field
 msgid "Field"
 msgstr "Feld"
@@ -165,6 +179,11 @@ msgid "Journal Entry"
 msgstr "Buchungssatz"
 
 #. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_report_state__key
+msgid "Key"
+msgstr "Schlüssel"
+
+#. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_account_move____last_update
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note____last_update
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_report_state____last_update
@@ -187,6 +206,12 @@ msgid "Last Updated on"
 msgstr "Zuletzt aktualisier am"
 
 #. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_done
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_done
+msgid "Locked"
+msgstr "Abgeschlossen"
+
+#. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__name
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_report_state__name
 msgid "Name"
@@ -203,6 +228,21 @@ msgid "Position"
 msgstr ""
 
 #. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.account_move_state_posted
+msgid "Posted"
+msgstr "Gebucht"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_sent
+msgid "Quotation Sent"
+msgstr "Gesendet"
+
+#. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_assigned
+msgid "Ready"
+msgstr "Zugewiesen"
+
+#. module: custom_report_notes
 #: model:ir.model,name:custom_report_notes.model_custom_report_notes_report_state
 msgid "Report State"
 msgstr "Berichtsstatus"
@@ -213,6 +253,7 @@ msgid "Report Type"
 msgstr "Berichtsart"
 
 #. module: custom_report_notes
+#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_sale
 #: model:ir.model,name:custom_report_notes.model_sale_order
 #: model:ir.model.fields.selection,name:custom_report_notes.selection__custom_report_notes_report_state__res_model__sale_order
 msgid "Sales Order"
@@ -265,51 +306,11 @@ msgid "Transfer"
 msgstr "Lieferung vornehmen"
 
 #. module: custom_report_notes
-#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_assigned
-msgid "assigned"
-msgstr "Zugewiesen"
-
-#. module: custom_report_notes
-#: model:custom_report_notes.report_state,name:custom_report_notes.account_move_state_cancel
-#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_cancel
-#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_cancel
-msgid "cancel"
-msgstr "Abgebrochen"
-
-#. module: custom_report_notes
 #: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_confirmed
-msgid "confirmed"
+msgid "Waiting"
 msgstr "Warteliste"
 
 #. module: custom_report_notes
-#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_done
-#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_done
-msgid "done"
-msgstr "Abgeschlossen"
-
-#. module: custom_report_notes
-#: model:custom_report_notes.report_state,name:custom_report_notes.account_move_state_draft
-#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_draft
-#: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_draft
-msgid "draft"
-msgstr "Entwurf"
-
-#. module: custom_report_notes
-#: model:custom_report_notes.report_state,name:custom_report_notes.account_move_state_posted
-msgid "posted"
-msgstr "Gebucht"
-
-#. module: custom_report_notes
-#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_sale
-msgid "sale"
-msgstr "Auftrag"
-
-#. module: custom_report_notes
-#: model:custom_report_notes.report_state,name:custom_report_notes.sale_order_state_sent
-msgid "sent"
-msgstr "Gesendet"
-
-#. module: custom_report_notes
 #: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_waiting
-msgid "waiting"
+msgid "Waiting Another Operation"
 msgstr "Wartet auf anderen Vorgang"

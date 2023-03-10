@@ -3,74 +3,88 @@
   <data>
 
     <record id="sale_order_state_draft" model="custom_report_notes.report_state">
-      <field name="name">draft</field>
+      <field name="name">Draft</field>
+      <field name="key">draft</field>
       <field name="sequence">1</field>
       <field name="res_model">sale.order</field>
     </record>
     <record id="sale_order_state_sent" model="custom_report_notes.report_state">
-      <field name="name">sent</field>
+      <field name="name">Quotation Sent</field>
+      <field name="key">sent</field>
       <field name="sequence">2</field>
       <field name="res_model">sale.order</field>
     </record>
     <record id="sale_order_state_sale" model="custom_report_notes.report_state">
-      <field name="name">sale</field>
+      <field name="name">Sales Order</field>
+      <field name="key">sale</field>
       <field name="sequence">3</field>
       <field name="res_model">sale.order</field>
     </record>
     <record id="sale_order_state_done" model="custom_report_notes.report_state">
-      <field name="name">done</field>
+      <field name="name">Locked</field>
+      <field name="key">done</field>
       <field name="sequence">4</field>
       <field name="res_model">sale.order</field>
     </record>
     <record id="sale_order_state_cancel" model="custom_report_notes.report_state">
-      <field name="name">cancel</field>
+      <field name="name">Cancelled</field>
+      <field name="key">cancel</field>
       <field name="sequence">5</field>
       <field name="res_model">sale.order</field>
     </record>
 
     <record id="stock_picking_state_draft" model="custom_report_notes.report_state">
-      <field name="name">draft</field>
+      <field name="name">Draft</field>
+      <field name="key">draft</field>
       <field name="sequence">1</field>
       <field name="res_model">stock.picking</field>
     </record>
     <record id="stock_picking_state_waiting" model="custom_report_notes.report_state">
-      <field name="name">waiting</field>
+      <field name="name">Waiting Another Operation</field>
+      <field name="key">waiting</field>
       <field name="sequence">2</field>
       <field name="res_model">stock.picking</field>
     </record>
     <record id="stock_picking_state_confirmed" model="custom_report_notes.report_state">
-      <field name="name">confirmed</field>
+      <field name="name">Waiting</field>
+      <field name="key">confirmed</field>
       <field name="sequence">3</field>
       <field name="res_model">stock.picking</field>
     </record>
     <record id="stock_picking_state_assigned" model="custom_report_notes.report_state">
-      <field name="name">assigned</field>
+      <field name="name">Ready</field>
+      <field name="key">assigned</field>
       <field name="sequence">4</field>
       <field name="res_model">stock.picking</field>
     </record>
     <record id="stock_picking_state_done" model="custom_report_notes.report_state">
-      <field name="name">done</field>
+      <field name="name">Locked</field>
+      <field name="key">done</field>
       <field name="sequence">5</field>
       <field name="res_model">stock.picking</field>
     </record>
     <record id="stock_picking_state_cancel" model="custom_report_notes.report_state">
-      <field name="name">cancel</field>
+      <field name="name">Cancelled</field>
+      <field name="key">cancel</field>
       <field name="sequence">6</field>
       <field name="res_model">stock.picking</field>
     </record>
 
     <record id="account_move_state_draft" model="custom_report_notes.report_state">
-      <field name="name">draft</field>
+      <field name="name">Draft</field>
+      <field name="key">draft</field>
       <field name="sequence">1</field>
       <field name="res_model">account.move</field>
     </record>
     <record id="account_move_state_posted" model="custom_report_notes.report_state">
-      <field name="name">posted</field>
+      <field name="name">Posted</field>
+      <field name="key">posted</field>
       <field name="sequence">1</field>
       <field name="res_model">account.move</field>
     </record>
     <record id="account_move_state_cancel" model="custom_report_notes.report_state">
-      <field name="name">cancel</field>
+      <field name="name">Cancelled</field>
+      <field name="key">cancel</field>
       <field name="sequence">1</field>
       <field name="res_model">account.move</field>
     </record>
