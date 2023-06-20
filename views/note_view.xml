@@ -95,7 +95,7 @@
               </group>
             </group>
             <group>
-              <field name="content"/>
+              <field name="content" options="{'codeview': true}"/>
             </group>
           </sheet>
         </form>
