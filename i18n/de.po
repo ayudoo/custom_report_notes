@@ -127,12 +127,8 @@ msgid "Delivery States"
 msgstr "Lieferauftrags Status"
 
 #. module: custom_report_notes
-#: model:ir.model.fields,field_description:custom_report_notes.field_account_move__display_name
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__display_name
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_report_state__display_name
-#: model:ir.model.fields,field_description:custom_report_notes.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:custom_report_notes.field_sale_order__display_name
-#: model:ir.model.fields,field_description:custom_report_notes.field_stock_picking__display_name
 msgid "Display Name"
 msgstr "Anzeigename"
 
@@ -142,6 +138,11 @@ msgstr "Anzeigename"
 #: model:custom_report_notes.report_state,name:custom_report_notes.stock_picking_state_draft
 msgid "Draft"
 msgstr "Entwurf"
+
+#. module: custom_report_notes
+#: model:res.groups,name:custom_report_notes.group_custom_report_notes
+msgid "Edit Custom Report Notes"
+msgstr "Angepasste Berichtnotizen editieren"
 
 #. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__field
@@ -159,12 +160,8 @@ msgid "Heading"
 msgstr "Überschrift"
 
 #. module: custom_report_notes
-#: model:ir.model.fields,field_description:custom_report_notes.field_account_move__id
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__id
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_report_state__id
-#: model:ir.model.fields,field_description:custom_report_notes.field_res_config_settings__id
-#: model:ir.model.fields,field_description:custom_report_notes.field_sale_order__id
-#: model:ir.model.fields,field_description:custom_report_notes.field_stock_picking__id
 msgid "ID"
 msgstr ""
 
@@ -184,14 +181,10 @@ msgid "Key"
 msgstr "Schlüssel"
 
 #. module: custom_report_notes
-#: model:ir.model.fields,field_description:custom_report_notes.field_account_move____last_update
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note____last_update
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_report_state____last_update
-#: model:ir.model.fields,field_description:custom_report_notes.field_res_config_settings____last_update
-#: model:ir.model.fields,field_description:custom_report_notes.field_sale_order____last_update
-#: model:ir.model.fields,field_description:custom_report_notes.field_stock_picking____last_update
 msgid "Last Modified on"
-msgstr "Zuletzt geändert am"
+msgstr "Zuletzt bearbeitet am"
 
 #. module: custom_report_notes
 #: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__write_uid

@@ -15,6 +15,7 @@
         "stock",
     ],
     "data": [
+        "security/notes_security.xml",
         "security/ir.model.access.csv",
         "views/note_view.xml",
         "views/res_config_settings_view.xml",
