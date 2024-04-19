@@ -14,6 +14,8 @@ class CustomReportNote(models.Model):
 
     active = fields.Boolean(default=True)
 
+    company_id = fields.Many2one('res.company', 'Company', index=True)
+
     name = fields.Char(
         string="Name",
         required=True,

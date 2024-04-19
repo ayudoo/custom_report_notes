@@ -82,6 +82,11 @@ msgid "Cancelled"
 msgstr "Abgebrochen"
 
 #. module: custom_report_notes
+#: model:ir.model.fields,field_description:custom_report_notes.field_custom_report_notes_note__company_id
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: custom_report_notes
 #: model:ir.model,name:custom_report_notes.model_res_config_settings
 msgid "Config Settings"
 msgstr "Konfiguration"

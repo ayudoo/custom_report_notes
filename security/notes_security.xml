@@ -13,5 +13,11 @@
         eval="[(4, ref('custom_report_notes.group_custom_report_notes'))]"/>
     </record>
 
+    <record id="custom_report_note_company_rule" model="ir.rule">
+      <field name="name" >Custom Report Note multi-company</field>
+      <field name="model_id" ref="model_custom_report_notes_note"/>
+      <field name="domain_force"> ['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>
+    </record>
+
   </data>
 </odoo>
