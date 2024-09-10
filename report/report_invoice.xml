@@ -42,9 +42,11 @@
       </t>
     </xpath>
     <xpath expr="//t[@t-call='web.external_layout']" position="inside">
-      <t t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="o.get_custom_report_notes('bottom', None)"/>
-      </t>
+      <div class="notes-block-bottom">
+        <t t-call="custom_report_notes.notes_block">
+          <t t-set="notes" t-value="o.get_custom_report_notes('bottom', None)"/>
+        </t>
+      </div>
     </xpath>
   </template>
 </odoo>

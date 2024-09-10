@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
-
     <record id="view_custom_report_notes_search" model="ir.ui.view">
       <field name="name">custom_report_notes.note.search</field>
       <field name="model">custom_report_notes.note</field>
@@ -9,93 +8,92 @@
         <search string="Custom Report Notes Search">
           <field name="name"/>
           <filter
-            string="Applicable To Sales Orders"
+            domain="[('applicable_to_sale_orders','=',True)]"
             name="applicable_to_sale_orders"
-            domain="[('applicable_to_sale_orders','=',True)]"/>
+            string="Applicable To Sales Orders"/>
           <filter
-            string="Applicable To Deliveries"
+            domain="[('applicable_to_stock_pickings','=',True)]"
             name="applicable_to_stock_pickings"
-            domain="[('applicable_to_stock_pickings','=',True)]"/>
+            string="Applicable To Deliveries"/>
           <filter
-            string="Applicable To Invoices"
+            domain="[('applicable_to_account_moves','=',True)]"
             name="applicable_to_account_moves"
-            domain="[('applicable_to_account_moves','=',True)]"/>
+            string="Applicable To Invoices"/>
           <separator/>
-          <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+          <filter domain="[('active','=',False)]" name="inactive" string="Archived"/>
         </search>
       </field>
     </record>
-
     <record id="view_custom_report_note_form" model="ir.ui.view">
       <field name="name">custom_report_notes.note.form</field>
       <field name="model">custom_report_notes.note</field>
       <field name="arch" type="xml">
         <form string="Custom Report Note">
-          <field name="active" invisible="1"/>
+          <field invisible="1" name="active"/>
           <sheet>
             <div class="oe_button_box" name="button_box"/>
             <widget
-              name="web_ribbon"
-              title="Archived"
               bg_color="bg-danger"
-              attrs="{'invisible': [('active', '=', True)]}"/>
+              invisible="active == True"
+              name="web_ribbon"
+              title="Archived"/>
             <group>
               <group>
                 <field name="name"/>
                 <field name="field"/>
-                <field name="position" attrs="{'invisible': [('field', '=', 'bottom')]}"/>
+                <field invisible="field == 'bottom'" name="position"/>
                 <field name="page_break"/>
                 <field
-                  name="company_id"
                   groups="base.group_multi_company"
+                  name="company_id"
                   options="{'no_create': True}"/>
               </group>
               <group>
                 <field name="applicable_to_sale_orders"/>
                 <field
+                  invisible="applicable_to_sale_orders == False"
                   name="sale_order_state_ids"
                   string="States"
-                  widget="many2many_tags"
-                  attrs="{'invisible': [('applicable_to_sale_orders', '=', False)]}"/>
+                  widget="many2many_tags"/>
                 <field
-                  name="sale_order_domain"
-                  string="Filter"
-                  widget="domain"
-                  attrs="{'invisible': [('applicable_to_sale_orders', '=', False)]}"
                   context="{
                     'preview_custom_report_note_sale_order_state_ids': sale_order_state_ids,
                   }"
-                  options="{'model': 'sale.order'}"/>
+                  invisible="applicable_to_sale_orders == False"
+                  name="sale_order_domain"
+                  options="{'model': 'sale.order'}"
+                  string="Filter"
+                  widget="domain"/>
                 <field name="applicable_to_stock_pickings"/>
                 <field
+                  invisible="applicable_to_stock_pickings == False"
                   name="stock_picking_state_ids"
                   string="States"
-                  widget="many2many_tags"
-                  attrs="{'invisible': [('applicable_to_stock_pickings', '=', False)]}"/>
+                  widget="many2many_tags"/>
                 <field
-                  name="stock_picking_domain"
-                  string="Filter"
-                  widget="domain"
-                  attrs="{'invisible': [('applicable_to_stock_pickings', '=', False)]}"
                   context="{
                     'preview_custom_report_note_stock_picking_state_ids': stock_picking_state_ids,
                   }"
-                  options="{'model': 'stock.picking'}"/>
+                  invisible="applicable_to_stock_pickings == False"
+                  name="stock_picking_domain"
+                  options="{'model': 'stock.picking'}"
+                  string="Filter"
+                  widget="domain"/>
                 <field name="applicable_to_account_moves"/>
                 <field
+                  invisible="applicable_to_account_moves == False"
                   name="account_move_state_ids"
                   string="States"
-                  widget="many2many_tags"
-                  attrs="{'invisible': [('applicable_to_account_moves', '=', False)]}"/>
+                  widget="many2many_tags"/>
                 <field
-                  name="account_move_domain"
-                  string="Filter"
-                  widget="domain"
-                  attrs="{'invisible': [('applicable_to_account_moves', '=', False)]}"
                   context="{
                     'preview_custom_report_note_account_move_state_ids': account_move_state_ids,
                   }"
-                  options="{'model': 'account.move'}"/>
+                  invisible="applicable_to_account_moves == False"
+                  name="account_move_domain"
+                  options="{'model': 'account.move'}"
+                  string="Filter"
+                  widget="domain"/>
               </group>
             </group>
             <group>
@@ -105,35 +103,31 @@
         </form>
       </field>
     </record>
-
     <record id="view_custom_report_note_tree" model="ir.ui.view">
       <field name="name">custom_report_notes.note.tree</field>
       <field name="model">custom_report_notes.note</field>
-      <field name="field_parent">child_ids</field>
       <field name="arch" type="xml">
         <tree string="Custom Report Note">
           <field name="sequence" widget="handle"/>
           <field name="name"/>
           <field
-            name="company_id"
-            options="{'no_create': True}"
             groups="base.group_multi_company"
-            optional="hide"/>
+            name="company_id"
+            optional="hide"
+            options="{'no_create': True}"/>
           <field name="field"/>
-          <field name="position" attrs="{'invisible': [('field', '=', 'bottom')]}"/>
+          <field invisible="field == 'bottom'" name="position"/>
           <field name="applicable_to_sale_orders" widget="boolean_toggle"/>
           <field name="applicable_to_stock_pickings" widget="boolean_toggle"/>
           <field name="applicable_to_account_moves" widget="boolean_toggle"/>
         </tree>
       </field>
     </record>
-
     <record id="action_custom_report_note" model="ir.actions.act_window">
       <field name="name">Custom Report Notes</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">custom_report_notes.note</field>
       <field name="view_id" ref="view_custom_report_note_tree"/>
     </record>
-
   </data>
 </odoo>

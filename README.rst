@@ -5,7 +5,7 @@ Custom Report Notes
    :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
    :alt: License: LGPL-3
 
-**This is the Odoo 16 branch**
+**This is the Odoo 17 branch**
 
 **This module is in beta state. Feel free to provide feedback.**
 
@@ -46,6 +46,7 @@ Limitations
 ^^^^^^^^^^^
 
 * links don't open a new page when printed on paper
+* with DIN 5008 document layout, custom report notes around address and above heading don't work
 
 
 Bug Tracker

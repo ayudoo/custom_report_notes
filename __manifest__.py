@@ -25,6 +25,11 @@
         "report/report_sale_order.xml",
         "data/report_state_data.xml",
     ],
+    "assets": {
+        "web.report_assets_common": [
+            "custom_report_notes/static/src/**/*",
+        ],
+    },
     "license": "LGPL-3",
     "application": True,
     "installable": True,
