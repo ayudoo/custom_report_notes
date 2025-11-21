@@ -12,7 +12,7 @@
         <t t-set="notes" t-value="o.get_custom_report_notes('address', 'after')"/>
       </t>
     </xpath>
-    <xpath expr="//div[hasclass('page')]/h2" position="before">
+    <!-- <xpath expr="//div[hasclass('page')]/h2" position="before">
       <t t-call="custom_report_notes.notes_block">
         <t t-set="notes" t-value="o.get_custom_report_notes('heading', 'before')"/>
       </t>
@@ -21,7 +21,7 @@
       <t t-call="custom_report_notes.notes_block">
         <t t-set="notes" t-value="o.get_custom_report_notes('heading', 'after')"/>
       </t>
-    </xpath>
+    </xpath> -->
     <xpath expr="//table" position="before">
       <t t-call="custom_report_notes.notes_block">
         <t t-set="notes" t-value="o.get_custom_report_notes('table', 'before')"/>

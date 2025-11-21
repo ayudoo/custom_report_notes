@@ -23,6 +23,7 @@
         "report/report_deliveryslip.xml",
         "report/report_invoice.xml",
         "report/report_sale_order.xml",
+        "report/report_templates.xml",
         "data/report_state_data.xml",
     ],
     "assets": {

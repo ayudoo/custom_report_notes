@@ -107,7 +107,7 @@
       <field name="name">custom_report_notes.note.tree</field>
       <field name="model">custom_report_notes.note</field>
       <field name="arch" type="xml">
-        <tree string="Custom Report Note">
+        <list string="Custom Report Note">
           <field name="sequence" widget="handle"/>
           <field name="name"/>
           <field
@@ -120,7 +120,7 @@
           <field name="applicable_to_sale_orders" widget="boolean_toggle"/>
           <field name="applicable_to_stock_pickings" widget="boolean_toggle"/>
           <field name="applicable_to_account_moves" widget="boolean_toggle"/>
-        </tree>
+        </list>
       </field>
     </record>
     <record id="action_custom_report_note" model="ir.actions.act_window">

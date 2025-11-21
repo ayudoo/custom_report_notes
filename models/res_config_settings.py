@@ -6,7 +6,7 @@ class ResConfigSettings(models.TransientModel):
 
     def action_custom_report_notes(self):
         return {
-            "view_mode": "tree",
+            "view_mode": "list",
             "view_id": self.env.ref(
                 "custom_report_notes.view_custom_report_note_tree"
             ).id,
