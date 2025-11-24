@@ -7,7 +7,7 @@
     """,
     "author": "Michael Jurke, Ayudoo Ltd",
     "category": "Sales",
-    "version": "18.0.0.10",
+    "version": "0.2",
     "depends": [
         "base",
         "account",
