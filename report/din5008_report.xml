@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <template id="external_layout_din5008" inherit_id="l10n_din5008.external_layout_din5008">
+    <xpath expr="//h2" position="before">
+      <t
+        t-if="doc and doc._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="doc"/>
+      <t
+        t-if="o and o._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="o"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'before')"/>
+      </t>
+    </xpath>
+    <xpath expr="//h2" position="after">
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'after')"/>
+      </t>
+    </xpath>
+  </template>
+
+</odoo>

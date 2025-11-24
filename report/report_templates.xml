@@ -3,60 +3,100 @@
 
   <template id="external_layout_striped" inherit_id="web.external_layout_striped">
     <xpath expr="//*[@t-out='layout_document_title']" position="before">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'before')"/>
+      <t
+        t-if="doc and doc._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="doc"/>
+      <t
+        t-if="o and o._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="o"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'before')"/>
       </t>
     </xpath>
     <xpath expr="//*[@t-out='layout_document_title']" position="after">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'after')"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'after')"/>
       </t>
     </xpath>
   </template>
 
   <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
     <xpath expr="//*[@t-out='layout_document_title']" position="before">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'before')"/>
+      <t
+        t-if="doc and doc._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="doc"/>
+      <t
+        t-if="o and o._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="o"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'before')"/>
       </t>
     </xpath>
     <xpath expr="//*[@t-out='layout_document_title']" position="after">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'after')"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'after')"/>
       </t>
     </xpath>
   </template>
 
   <template id="external_layout_bold" inherit_id="web.external_layout_bold">
     <xpath expr="//*[@t-out='layout_document_title']" position="before">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'before')"/>
+      <t
+        t-if="doc and doc._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="doc"/>
+      <t
+        t-if="o and o._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="o"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'before')"/>
       </t>
     </xpath>
     <xpath expr="//*[@t-out='layout_document_title']" position="after">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'after')"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'after')"/>
       </t>
     </xpath>
   </template>
 
   <template id="external_layout_standard" inherit_id="web.external_layout_standard">
     <xpath expr="//*[@t-out='layout_document_title']" position="before">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'before')"/>
+      <t
+        t-if="doc and doc._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="doc"/>
+      <t
+        t-if="o and o._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="o"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'before')"/>
       </t>
     </xpath>
     <xpath expr="//*[@t-out='layout_document_title']" position="after">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'after')"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'after')"/>
       </t>
     </xpath>
   </template>
 
   <template id="external_layout_folder" inherit_id="web.external_layout_folder">
     <xpath expr="//t[@t-out='layout_document_title']" position="before">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'before')"/>
+      <t
+        t-if="doc and doc._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="doc"/>
+      <t
+        t-if="o and o._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="o"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'before')"/>
       </t>
     </xpath>
     <xpath expr="//h3[@t-out='layout_document_title']" position="before">
@@ -65,8 +105,8 @@
       </t>
     </xpath>
     <xpath expr="//t[@t-out='layout_document_title']" position="after">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'after')"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'after')"/>
       </t>
     </xpath>
     <xpath expr="//h3[@t-out='layout_document_title']" position="after">
@@ -78,26 +118,42 @@
 
   <template id="external_layout_wave" inherit_id="web.external_layout_wave">
     <xpath expr="//*[@t-out='layout_document_title']" position="before">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'before')"/>
+      <t
+        t-if="doc and doc._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="doc"/>
+      <t
+        t-if="o and o._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="o"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'before')"/>
       </t>
     </xpath>
     <xpath expr="//*[@t-out='layout_document_title']" position="after">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'after')"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'after')"/>
       </t>
     </xpath>
   </template>
 
   <template id="external_layout_bubble" inherit_id="web.external_layout_bubble">
     <xpath expr="//*[@t-out='layout_document_title']" position="before">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'before')"/>
+      <t
+        t-if="doc and doc._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="doc"/>
+      <t
+        t-if="o and o._name in ['sale.order', 'stock.picking', 'account.move']"
+        t-set="custom_report_doc"
+        t-value="o"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'before')"/>
       </t>
     </xpath>
     <xpath expr="//*[@t-out='layout_document_title']" position="after">
-      <t t-if="hasattr(doc, 'get_custom_report_notes'" t-call="custom_report_notes.notes_block">
-        <t t-set="notes" t-value="doc.get_custom_report_notes('heading', 'after')"/>
+      <t t-if="custom_report_doc" t-call="custom_report_notes.notes_block">
+        <t t-set="notes" t-value="custom_report_doc.get_custom_report_notes('heading', 'after')"/>
       </t>
     </xpath>
   </template>

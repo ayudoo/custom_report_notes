@@ -7,7 +7,7 @@
     """,
     "author": "Michael Jurke, Ayudoo Ltd",
     "category": "Sales",
-    "version": "0.1",
+    "version": "18.0.0.10",
     "depends": [
         "base",
         "account",
@@ -34,4 +34,5 @@
     "license": "LGPL-3",
     "application": True,
     "installable": True,
+    "post_init_hook": "_post_init_hook",
 }
